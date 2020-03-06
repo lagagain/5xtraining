@@ -25,13 +25,18 @@
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <header class="">
-            <nav class="px-4 py-3 container-fluid">
+            <nav class="container-fluid">
                 <div class="row">
-                    <a href="/" class="col-2">
+                    <a href="/" class="px-4 py-3 col-2">
                         <img src="%PUBLIC_URL%/logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" />
                     </a>
                     <div class="col" id="mobile-dropdown">
-                        <ul class="d-flex justify-content-end">
+                        <div class="d-flex d-md-none justify-content-end">
+                            <button class="menu-button" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="fas fa-bars"></div>
+                            </button>
+                        </div>
+                        <ul class="d-flex flex-column flex-md-row mt-md-auto mt-4 justify-content-end">
                             <li class="p-3">
                                 <i class="pr-1 far fa-gem"></i>
                                 <a class="" href="#" target="">線上課程</a>
@@ -67,6 +72,7 @@
                                 <a class="" href="#">最新消息</a>
                             </li>
                         </ul>
+
                     </div>
                 </div>
             </nav>
