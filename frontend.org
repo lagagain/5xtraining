@@ -65,52 +65,52 @@
     :CUSTOM_ID: 步驟 1-建立-javascript-的開發環境
     :END:
 
-**** 1-1: 安裝 Node.js[%]
+**** 1-1: 安裝 Node.js[100%]
      :PROPERTIES:
      :CUSTOM_ID: 安裝-node.js
      :END:
 
-- [ ] 利用 [[https://github.com/creationix/nvm][nvm]] 或
+- [X] 利用 [[https://github.com/creationix/nvm][nvm]] 或
    [[https://brew.sh/index_zh-tw][Homebrew]] 安裝最新版本的 Node.js
-- [ ] 以 =node -v= 指令來確認 Node.js 的版本
+- [X] 以 =node -v= 指令來確認 Node.js 的版本
 
-**** 1-2: 安裝 [[https://yarnpkg.com/zh-Hans/][yarn]][%]
+**** 1-2: 安裝 [[https://yarnpkg.com/zh-Hans/][yarn]][100%]
      :PROPERTIES:
      :CUSTOM_ID: 安裝-yarn
      :END:
 
-- [ ] =$ brew install yarn=
-- [ ] 以 =$ yarn -v= 指令來確認版本
-- [ ] 了解 =package.json= 基本內文格式與基本指令
-- [ ] 了解 =dependencies=、=devDependencies=、=peerDependencies=
+- [X] =$ brew install yarn=
+- [X] 以 =$ yarn -v= 指令來確認版本
+- [X] 了解 =package.json= 基本內文格式與基本指令
+- [X] 了解 =dependencies=、=devDependencies=、=peerDependencies=
    的差異與指令
 
-*** 步驟 2: 在 GitHub 建立 repo[0%]
+*** 步驟 2: 在 GitHub 建立 repo[100%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 2-在-github-建立-repo
     :END:
 
-- [ ] 在你的環境中安裝 git[0%]
+- [X] 在你的環境中安裝 git[100%]
 
-  - [ ] macOS 的話，請以 =brew= 等工具安裝
-  - [ ] 以 =$ git config= 設定 user name 和 email
+  - [X] macOS 的話，請以 =brew= 等工具安裝
+  - [X] 以 =$ git config= 設定 user name 和 email
 
-- [ ] 請考慮專案名稱（也等於 repo 名稱）
-- [ ] 建立 repo[0%]
+- [X] 請考慮專案名稱（也等於 repo 名稱）
+- [X] 建立 repo[100%]
 
-  - [ ] 如果沒有帳號的話，先申請帳號
-  - [ ] 接著產生空白的 repo
+  - [X] 如果沒有帳號的話，先申請帳號
+  - [X] 接著產生空白的 repo
 
-*** 步驟 3: 建立 React 專案[%]
+*** 步驟 3: 建立 React 專案[25%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 3-建立-react-專案
     :END:
-
-- [ ] 以 =$ npx create-react-app= 指令，建立 app 最低限度的樣板和檔案
-- [ ] 在 =create-react-app= 產生的專案目錄下，建立 =docs= [%]
+z
+- [X] 以 =$ npx create-react-app= 指令，建立 app 最低限度的樣板和檔案
+- [ ] 在 =create-react-app= 產生的專案目錄下，建立 =docs= [0%]
    資料夾，並將本教程文件 commit 進去
 
-   - [ ] 搬進來是為了方便之後開發時可以參考
+  - [ ] 搬進來是為了方便之後開發時可以參考
 
 - [ ] 將成品 push 到 GitHub 的 repo
 - [ ] 將使用的 Node.js 版號寫進 =package.json=（也請確認 React
