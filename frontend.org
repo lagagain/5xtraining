@@ -101,19 +101,19 @@
   - [X] 如果沒有帳號的話，先申請帳號
   - [X] 接著產生空白的 repo
 
-*** 步驟 3: 建立 React 專案[25%]
+*** 步驟 3: 建立 React 專案[100%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 3-建立-react-專案
     :END:
 z
 - [X] 以 =$ npx create-react-app= 指令，建立 app 最低限度的樣板和檔案
-- [ ] 在 =create-react-app= 產生的專案目錄下，建立 =docs= [0%]
+- [X] 在 =create-react-app= 產生的專案目錄下，建立 =docs= [100%]
    資料夾，並將本教程文件 commit 進去
 
-  - [ ] 搬進來是為了方便之後開發時可以參考
+  - [X] 搬進來是為了方便之後開發時可以參考
 
-- [ ] 將成品 push 到 GitHub 的 repo
-- [ ] 將使用的 Node.js 版號寫進 =package.json=（也請確認 React
+- [X] 將成品 push 到 GitHub 的 repo
+- [X] 將使用的 Node.js 版號寫進 =package.json=（也請確認 React
    版號是否有標明）
 
 *** 步驟 4: 復刻 [[https://5xruby.tw/][五倍官網首頁]][%]
