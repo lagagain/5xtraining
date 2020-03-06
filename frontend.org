@@ -116,13 +116,13 @@ z
 - [X] 將使用的 Node.js 版號寫進 =package.json=（也請確認 React
    版號是否有標明）
 
-*** 步驟 4: 復刻 [[https://5xruby.tw/][五倍官網首頁]][%]
+*** 步驟 4: 復刻 [[https://5xruby.tw/][五倍官網首頁]][30%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 4-復刻-五倍官網首頁
     :END:
 
-- [ ] 引入 =bootstrap=、=jquery= 請使用 yarn 安裝使用
-- [ ] 不使用 React、其它 library, 只能用 jquery + css
+- [X] 引入 =bootstrap=、=jquery= 請使用 yarn 安裝使用
+- [X] 不使用 React、其它 library, 只能用 jquery + css
    實作官網上的元件(bootstrap 只可用 grid system、排版用的 class)
 - [ ] 請分成三階段發 PR, header、footer、content
 - [ ] 只需考量 sm、md、lg 3 種 RWD breakpoint
@@ -131,7 +131,7 @@ z
 - [ ] 點下圓點按鈕可以跳到指定的 Slide
 - [ ] 自動播放（5秒換頁一次）
 - [ ] 滑鼠在 Carousel 上時暫停自動播放
-- [ ] 目標著重於 jquery、javascript、css 熟悉度
+- [X] 目標著重於 jquery、javascript、css 熟悉度
 
 *** 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][%]
     :PROPERTIES:
