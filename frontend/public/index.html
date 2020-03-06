@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>網頁設計前後端程式教學機構 | 實戰轉職訓練 | 五倍紅寶石</title>
-    <meta name="keywords" content="網頁設計課程,前端,後端,程式語言課程,Html,CSS,JavaScript,Git,Ruby on Rails">
-    <meta name="description" content="五倍紅寶石程式網頁設計課程，帶你掌握業界網頁前端、後端開發課程，讓你擁有實戰技能以及經驗，轉職工程師成功免求人，提供工程師助教、線上補課，不怕跟不上課程進度">
-    <meta property="og:title" content="網頁設計前後端程式教學機構 | 實戰轉職訓練 | 五倍紅寶石">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="網頁設計前後端程式教學機構 | 實戰轉職訓練 | 五倍紅寶石">
-    <meta property="og:url" content="https://5xruby.tw/">
-    <meta property="og:locale" content="zh_tw">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="五倍紅寶石程式網頁設計課程，帶你掌握業界網頁前端、後端開發課程，讓你擁有實戰技能以及經驗，轉職工程師成功免求人，提供工程師助教、線上補課，不怕跟不上課程進度">
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+            name="description"
+            content="Web site created using create-react-app"
+        />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <title>網頁設計前後端程式教學機構 | 實戰轉職訓練 | 五倍紅寶石</title>
+        <meta name="keywords" content="網頁設計課程,前端,後端,程式語言課程,Html,CSS,JavaScript,Git,Ruby on Rails">
+        <meta name="description" content="五倍紅寶石程式網頁設計課程，帶你掌握業界網頁前端、後端開發課程，讓你擁有實戰技能以及經驗，轉職工程師成功免求人，提供工程師助教、線上補課，不怕跟不上課程進度">
+        <meta property="og:title" content="網頁設計前後端程式教學機構 | 實戰轉職訓練 | 五倍紅寶石">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="網頁設計前後端程式教學機構 | 實戰轉職訓練 | 五倍紅寶石">
+        <meta property="og:url" content="https://5xruby.tw/">
+        <meta property="og:locale" content="zh_tw">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="五倍紅寶石程式網頁設計課程，帶你掌握業界網頁前端、後端開發課程，讓你擁有實戰技能以及經驗，轉職工程師成功免求人，提供工程師助教、線上補課，不怕跟不上課程進度">
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <header class="">
+            <nav class="container-fluid">
+                <div class="row">
+                    <a href="/" class="px-4 py-3 col-2">
+                        <img src="%PUBLIC_URL%/logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" />
+                    </a>
+                    <div class="col" id="mobile-dropdown">
+                        <div class="d-flex d-md-none justify-content-end">
+                            <button class="menu-button" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="fas fa-bars"></div>
+                            </button>
+                        </div>
+                        <ul class="d-flex flex-column flex-md-row mt-md-auto mt-4 justify-content-end">
+                            <li class="p-3">
+                                <i class="pr-1 far fa-gem"></i>
+                                <a class="" href="#" target="">線上課程</a>
+                            </li>
+                            <li class="p-3">
+                                <i class="pr-1 far fa-compass fa-lg"></i>
+                                <a class="" href="#" target=""> ASTRO Camp</a>
+                            </li>
+                            <li class="p-3">
+                                <a class="" href="#">
+                                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="12.59" height="19.215" viewBox="0 0 12.59 19.215">
+                                        <path id="bolt" d="M10.231,5.536H6.239L7.713,1.045A.834.834,0,0,0,6.91,0H1.927A.832.832,0,0,0,1.1.72L0,9.024a.832.832,0,0,0,.823.941H4.927l-1.6,6.73a.83.83,0,0,0,1.526.606l6.09-10.519A.829.829,0,0,0,10.231,5.536Z" transform="translate(0.762 0.75)" fill="none" stroke="#7d7d7d" stroke-width="1.5"/>
+                                    </svg>
+                                    全方位課程
+                                    <span class="">
+                                        <img src="%PUBLIC_URL%/new-301d86be.svg" alt="全方位網頁設計前後端實戰 - 假日班 | 五倍紅寶石" />
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="p-3" flex-column">
+                                <a class="" href="#">短期課程</a>
+                            </li>
+                            <li class="p-3" flex-column">
+                                <a class="" href="#">專案開發</a>
+                            </li>
+                            <li class="p-3" flex-column">
+                                <a class="" href="#">企業代訓</a>
+                            </li>
+                            <li class="p-3" flex-column">
+                                <a class="" href="#">空間租借</a>
+                            </li>
+                            <li class="p-3" flex-column">
+                                <a class="" href="#">最新消息</a>
+                            </li>
+                        </ul>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="root"></div>
+    </body>
 </html>
