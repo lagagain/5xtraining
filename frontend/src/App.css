@@ -83,6 +83,7 @@ header ul li a:hover{
 }
 
 .menu-button{
+    color: white;
     background-color: var(--red);
     border: none;
     height: 61px;
