@@ -68,6 +68,30 @@
   }
 }
 
+body, html{
+    font-size: 16px !important;
+}
+
+a {
+    color: #777;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:not(.btn){
+    color: #777;
+    text-decoration: none !important;
+}
+
+a:not(.btn):hover{
+    color: var(--red);
+    text-decoration: none !important;
+}
+
 header ul li{
     color: #555;
     list-style: none;
@@ -138,14 +162,16 @@ footer{
 
 .footer-nav h5{
     margin: 10px 25px 10px 0px;
+	  font-size: 0.875rem;
+	  font-weight: bold;
 }
 
 .footer-nav a{
     white-space: nowrap;
-    font-size: 1rem;
     margin: 0rem;
     width: 7.5rem;
     color: #333;
+    text-decoration: none;
 }
 
 .footer-nav a:hover{
@@ -201,4 +227,35 @@ footer{
     background-color: transparent;
     border: none;
     color: var(--red);
+}
+
+#about_5xruby{
+    background-color: #f7f7f7;
+}
+
+#about_5xruby a {
+	  color: #444;
+	  text-decoration: none;
+}
+
+#about_5xruby a:hover {
+	  color: #444;
+	  text-decoration: none;
+}
+
+#about_5xruby h3{
+    font-size: 24px;
+}
+
+.section-title:first-of-type:first-child::after {
+    left: calc(50% - 40px);
+    display: block;
+    margin: 40px 0 0 0;
+    //bottom: 0;
+    content: '';
+    height: 3px;
+    width: 80px;
+    background: #d90845;
+    border-radius: 3px;
+    position: absolute;
 }
