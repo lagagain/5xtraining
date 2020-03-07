@@ -1,0 +1,37 @@
+name: Deploy to Github(gh-page)
+
+on:   
+  push:
+    branches:
+      - my-step/frontend
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x,]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        path: frontend
+        node-version: ${{ matrix.node-version }}
+    - run: cd frontend; npm install
+    - run: cd frontend; npm run build
+      env:
+        PUBLIC_URL: "."
+        URL: true
+
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v1.2.5
+      with:
+          # Build directory to deploy
+          build_dir:  ./frontend/build
+          keep_history: false
+      env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
