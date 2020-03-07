@@ -257,5 +257,28 @@ footer{
     width: 80px;
     background: #d90845;
     border-radius: 3px;
-    position: absolute;
+    position: relative;;
+}
+
+.card img{
+    width:100%;
+}
+
+.card .course-status snap{
+    background-color: var(--red);
+    color: white;
+}
+
+.bg-red{
+    background-color: var(--red);
+}
+
+.showcases-partial .lecture-wrap {
+	  border: 1px solid rgba(0,0,0,.3);
+    height: 100%;
+}
+
+.avatar-partial img{
+    border-radius: 50%;
+    width: 100px;
 }
