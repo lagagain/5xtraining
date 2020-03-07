@@ -171,3 +171,34 @@ footer{
 .mail-address{
     text-align: left;
 }
+
+#banner img{
+    width: 100%;
+}
+
+#banner{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+#banner .buttons{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+}
+
+#banner .buttons button{
+    margin-right: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+#banner .buttons button:hover{
+    margin-right: 5px;
+    background-color: transparent;
+    border: none;
+    color: var(--red);
+}

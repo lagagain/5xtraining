@@ -133,7 +133,7 @@ z
 - [ ] 滑鼠在 Carousel 上時暫停自動播放
 - [X] 目標著重於 jquery、javascript、css 熟悉度
 
-*** 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][30%]
+*** 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][40%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 5-使用-react-改寫-五倍官網首頁
     :END:
@@ -141,7 +141,7 @@ z
 - [X] 使用 =bootstrap= 作為 css 框架，請使用 yarn 安裝引入
 - [X] 除了 React App 進入點之外不要使用 jQuery 或是 Vanilla DOM API
 - [ ] 將靜態資料抽離存成 json 檔, 並以 react props 的方式帶入
-- [ ] 目標著重於 React 元件模組化與 props 傳遞
+- [X] 目標著重於 React 元件模組化與 props 傳遞
 - [X] 只需考量 sm、md、lg 3 種 RWD breakpoint
 - [ ] Carousel 元件的實作需要達成以下要求：
 - [ ] 不使用 BS 內建的，手刻 Carousel React 元件
@@ -172,7 +172,7 @@ z
 - [ ] 分類好資料夾架構
 - [ ] 將先前的五倍首頁 react 版本導入至 webpack 並可運作
 
-*** 步驟 8: 加入 eslint 修正語法錯誤與 coding style [%]
+*** 步驟 8: 加入 eslint 修正語法錯誤 0 與 coding style [%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 8-加入-eslint-修正語法錯誤與-coding-style
     :END:
@@ -190,8 +190,7 @@ z
 
 - [ ] 加入 eslint 當做測試項目
 
-*** 步驟 10: 加入 [%]
-[[https://github.com/ReactTraining/react-router][React-Router]]
+*** 步驟 10: 加入 [[https://github.com/ReactTraining/react-router][React-Router]] [%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 10-加入-react-router
     :END:
