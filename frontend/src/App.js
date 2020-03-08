@@ -18,6 +18,48 @@ function App() {
 }
 
 class XHeader extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            menu_display: "block",
+            menu_toggle_status: false,
+        };
+        window.addEventListener("resize", this.menuButtonShowHandler);
+    }
+
+    toggleMenu = () => {
+        let menu_toggle_status = this.state.menu_toggle_status;
+        let menu_display = "";
+        menu_toggle_status = !menu_toggle_status;
+        if(menu_toggle_status){
+            menu_display = "block";
+        }else{
+            menu_display = "none";
+        }
+        this.setState({
+            menu_display,
+            menu_toggle_status,
+        });
+    }
+    menuButtonShowHandler = ()=>{
+        let menu_button = document.querySelector("header .menu-button");
+        let menu_button_display = window.getComputedStyle(menu_button).display;
+        let menu_display = "";
+        let menu_toggle_status = this.state.menu_toggle_status;
+
+        if(menu_button_display === "none"){
+            menu_display = "block";
+        }else{
+            if(menu_toggle_status){
+                menu_display = "block";
+            }else{
+                menu_display = "none";
+            }
+        }
+        this.setState({
+            menu_display,
+        });
+    }
     render(){
         return (
             <header>
@@ -26,14 +68,14 @@ class XHeader extends React.Component{
                   <img src="logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" />
                 </a>
 
-                <div className="col d-md-none d-flex justify-content-end">
+                <div className="col d-md-none d-flex justify-content-end"  onClick={this.toggleMenu}>
                   <button className="menu-button" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <div className="fas fa-bars"></div>
                   </button>
                 </div>
 
                 <div className="d-md-none w-100"></div>
-                <div className="col" id="mobile-dropdown">
+                <div className="col" id="mobile-dropdown" style={{display:this.state.menu_display}}>
                   <ul className="d-flex flex-column flex-md-row mt-md-auto mt-4 justify-content-md-end">
                     <li className="p-3">
                       <i className="pr-1 far fa-gem"></i>
