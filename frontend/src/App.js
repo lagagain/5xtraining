@@ -23,8 +23,11 @@ class XHeader extends React.Component{
         this.state = {
             menu_display: "block",
             menu_toggle_status: false,
+            header_position: "block",
         };
         window.addEventListener("resize", this.menuButtonShowHandler);
+        window.addEventListener("load", this.menuButtonShowHandler);
+        document.addEventListener("scroll", this.windowScrollHandler);
     }
 
     toggleMenu = () => {
@@ -46,23 +49,35 @@ class XHeader extends React.Component{
         let menu_button_display = window.getComputedStyle(menu_button).display;
         let menu_display = "";
         let menu_toggle_status = this.state.menu_toggle_status;
-
-        if(menu_button_display === "none"){
-            menu_display = "block";
-        }else{
+        console.log(menu_button_display);
+        if(menu_button_display === "block"){
             if(menu_toggle_status){
                 menu_display = "block";
             }else{
                 menu_display = "none";
             }
+        }else{
+            menu_display = "block";
         }
         this.setState({
             menu_display,
         });
     }
+    windowScrollHandler = (e)=>{
+        //let page_y = e.pageY;
+        let header = document.querySelector("header");
+        let scrollY = document.querySelector("html").scrollTop;
+        let header_height= window.getComputedStyle(header).height;
+        let header_fixedp = false;
+        header_height = parseFloat(header_height);
+        console.log(scrollY, header_height);
+        header_fixedp = (scrollY >= header_height * (2/3))? true : false;
+        this.setState({header_position:(header_fixedp)?"fixed":"static"});
+
+    }
     render(){
         return (
-            <header>
+            <header style={{position:this.state.header_position}}>
               <nav className="d-flex flex-wrap">
                 <a href="#" className="px-4 py-3">
                   <img src="logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" />
