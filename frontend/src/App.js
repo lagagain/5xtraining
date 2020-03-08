@@ -49,7 +49,6 @@ class XHeader extends React.Component{
         let menu_button_display = window.getComputedStyle(menu_button).display;
         let menu_display = "";
         let menu_toggle_status = this.state.menu_toggle_status;
-        console.log(menu_button_display);
         if(menu_button_display === "block"){
             if(menu_toggle_status){
                 menu_display = "block";
@@ -70,7 +69,6 @@ class XHeader extends React.Component{
         let header_height= window.getComputedStyle(header).height;
         let header_fixedp = false;
         header_height = parseFloat(header_height);
-        console.log(scrollY, header_height);
         header_fixedp = (scrollY >= header_height * (2/3))? true : false;
         this.setState({header_position:(header_fixedp)?"fixed":"static"});
 
@@ -135,6 +133,12 @@ class XHeaderMenuItem extends React.Component{
 }
 
 class XFooter extends React.Component{
+    scrollToTop(){
+        window.scrollTo({
+            top:0,
+            behavior:"smooth",
+        });
+    }
     render(){
         return (
             <footer className="">
@@ -201,7 +205,7 @@ class XFooter extends React.Component{
 
                 </div>
               </div>
-              <div id="scrTop" className="">
+              <div id="scrTop" className="" onClick={this.scrollToTop}>
                 <i className="fa fa-angle-up" id="scrUp" aria-hidden="true"></i>
               </div>
             </footer>
