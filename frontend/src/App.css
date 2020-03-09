@@ -231,6 +231,8 @@ footer{
     width: 100%;
     white-space: normal;
     display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 .my-carousel button{

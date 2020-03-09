@@ -423,7 +423,7 @@ class RecentLecture extends React.Component{
                   <div className="avatar-partial row text-left">
                     <div className="container">
                       <div className="d-flex flex-nowrap no-gutters mx-auto justify-content-center">
-                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-4">
+                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-md-4 p-2">
                           <img src="https://picsum.photos/100/100?random=1" className="d-block" alt="程式課程推薦 | Felix Lin | 五倍紅寶石" />
                         </div>
                         <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
@@ -438,7 +438,7 @@ class RecentLecture extends React.Component{
                   <div className="avatar-partial row text-left">
                     <div className="container">
                       <div className="d-flex flex-nowrap no-gutters mx-auto justify-content-center">
-                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-4">
+                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-md-4 p-2">
                           <img src="https://picsum.photos/100/100?random=2" className="d-block" alt="程式課程推薦 | Felix Lin | 五倍紅寶石" />
                         </div>
                         <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
@@ -453,7 +453,7 @@ class RecentLecture extends React.Component{
                   <div className="avatar-partial row text-left">
                     <div className="container">
                       <div className="d-flex flex-nowrap no-gutters mx-auto justify-content-center">
-                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-4">
+                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-md-4 p-2">
                           <img src="https://picsum.photos/100/100?random=3" className="d-block" alt="程式課程推薦 | Felix Lin | 五倍紅寶石" />
                         </div>
                         <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
