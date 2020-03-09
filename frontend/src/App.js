@@ -477,12 +477,16 @@ class RecentLecture extends React.Component{
 
 
 class Carousel extends React.Component{
+    auto_timer = null
+    mouse_hover = false
+    current_slice_id = 0
+    slice_cnt = 0
     constructor(props){
         super(props);
         this.state = {
             slice_style :{
                 left: "0%",
-            }
+            },
         };
         window.tmp = this;
     }
@@ -491,14 +495,16 @@ class Carousel extends React.Component{
         var carousel = document.querySelector(`.my-carousel[data-carousel-group='${carousel_group}']`);
         var slices = carousel.querySelectorAll(".slice > *");
         var button_group = carousel.querySelector(".buttons");
+        this.slice_cnt = slices.length;
 
-        for(let i = 0; i < slices.length; i++){
+        for(let i = 0; i < this.slice_cnt; i++){
             let button = document.createElement("button");
             button.innerHTML = '<i class="fas fa-circle"></i>';
             button.setAttribute("data-carousel-target", i);
             button.addEventListener("click", this.buttonClick);
             button_group.append( button );
         }
+        this.auto_timer = window.setInterval(this.autoRoll, 5000);
     }
 
     renderChildren = () => {
@@ -507,7 +513,6 @@ class Carousel extends React.Component{
                 let c = React.cloneElement(child, {
                     style: this.state.slice_style,
                 });
-                console.log(c);
                 return c;
             }
             else{
@@ -519,6 +524,7 @@ class Carousel extends React.Component{
     buttonClick = (e) => {
         let target = e.currentTarget;
         let index = target.getAttribute("data-carousel-target");
+        this.current_slice_id = index;
         this.setState({
             slice_style:{
                 left: (-index*100) + "%",
@@ -526,10 +532,33 @@ class Carousel extends React.Component{
         });
     }
 
+    onMouseEnter = () =>{
+        this.mouse_hover = true;
+    }
+
+    onMouseLeave = () => {
+        this.mouse_hover = false;
+    }
+
+    autoRoll = () => {
+        if(!this.mouse_hover){
+            this.current_slice_id = (this.current_slice_id + 1) % this.slice_cnt;
+            let index = this.current_slice_id;
+            this.setState({
+                slice_style:{
+                    left: (-index*100) + "%",
+                }
+            });
+        }
+    }
 
     render(){
         return (
-            <div className="my-carousel" data-carousel-group={this.props["data-carousel-group"]}>
+            <div className="my-carousel"
+                 data-carousel-group={this.props["data-carousel-group"]}
+                 onMouseEnter={this.onMouseEnter}
+                 onMouseLeave={this.onMouseLeave}
+            >
               {this.renderChildren()}
             </div>
         );
