@@ -133,7 +133,7 @@ z
 - [ ] 滑鼠在 Carousel 上時暫停自動播放
 - [X] 目標著重於 jquery、javascript、css 熟悉度
 
-*** 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][50%]
+*** 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][60%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 5-使用-react-改寫-五倍官網首頁
     :END:
@@ -145,7 +145,7 @@ z
 - [X] 只需考量 sm、md、lg 3 種 RWD breakpoint
 - [ ] Carousel 元件的實作需要達成以下要求：
 - [X] 不使用 BS 內建的，手刻 Carousel React 元件
-- [ ] 點下圓點按鈕可以跳到指定的 Slide
+- [X] 點下圓點按鈕可以跳到指定的 Slide
 - [ ] 自動播放（5秒換頁一次）
 - [ ] 滑鼠在 Carousel 上時暫停自動播放
 

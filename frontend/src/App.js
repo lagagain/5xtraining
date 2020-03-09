@@ -217,18 +217,16 @@ class Banner extends React.Component{
     render(){
         return (
             <div id="banner" className="">
-              <div className="slice">
-                <img src="https://picsum.photos/1260/446?random=1"></img>
-                <img src="https://picsum.photos/1260/446?random=2"></img>
-                <img src="https://picsum.photos/1260/446?random=3"></img>
-                <img src="https://picsum.photos/1260/446?random=4"></img>
-              </div>
-              <div className="d-flex" className="buttons">
-                <button>⏺</button>
-                <button>⏺</button>
-                <button>⏺</button>
-                <button>⏺</button>
-              </div>
+              <Carousel data-carousel-group="banner">
+                <div className="slice">
+                  <img src="https://picsum.photos/1260/446?random=1"></img>
+                  <img src="https://picsum.photos/1260/446?random=2"></img>
+                  <img src="https://picsum.photos/1260/446?random=3"></img>
+                  <img src="https://picsum.photos/1260/446?random=4"></img>
+                </div>
+                <div className="d-flex" className="buttons">
+                </div>
+              </Carousel>
             </div>
         );
     }
@@ -412,7 +410,7 @@ class RecentLecture extends React.Component{
 
     render(){
         return (
-            <div className="recent-lecture container">
+            <div className="recent-lecture pt-4 pb-4">
 
               <div className="">
                 <h3 className="section-title text-center">
@@ -420,25 +418,119 @@ class RecentLecture extends React.Component{
                 </h3>
               </div>
 
-              <div className="avatar-partial row text-left">
-                <div className="d-flex flex-nowrap no-gutters mx-auto justify-content-center">
-                  <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2">
-                    <img src="https://picsum.photos/100/100?random=1" className="d-block" alt="程式課程推薦 | Felix Lin | 五倍紅寶石" />
+              <Carousel data-carousel-group="recent-lecture">
+                <div className="slice">
+                  <div className="avatar-partial row text-left">
+                    <div className="container">
+                      <div className="d-flex flex-nowrap no-gutters mx-auto justify-content-center">
+                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-4">
+                          <img src="https://picsum.photos/100/100?random=1" className="d-block" alt="程式課程推薦 | Felix Lin | 五倍紅寶石" />
+                        </div>
+                        <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                          <p className="d-block statement">慕凡和龍哥是業界數一數二的 Ruby 大師，他們不光是底子深厚，也很懂得引導、訓練學習路上遇到挫折的 Ruby/Rails 學子。很慶幸有他們的協助讓我進入紅寶石的美妙世界。
+                            <br/><span className="d-block text-red large mt-3 mb-2">Hana Chang</span>
+                            <span className="d-block text-grey">Co-Founder and CEO of BountyHunter</span></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
-                    <p className="d-block statement">慕凡和龍哥是業界數一數二的 Ruby 大師，他們不光是底子深厚，也很懂得引導、訓練學習路上遇到挫折的 Ruby/Rails 學子。很慶幸有他們的協助讓我進入紅寶石的美妙世界。
-                      <br/><span className="d-block text-red large mt-3 mb-2">Hana Chang</span>
-                      <span className="d-block text-grey">Co-Founder and CEO of BountyHunter</span></p>
-                  </div>
-                </div>
-              </div>
 
-              <div className="d-flex row" className="buttons">
-                <button>⏺</button>
-                <button>⏺</button>
-                <button>⏺</button>
-                <button>⏺</button>
-              </div>
+                  <div className="avatar-partial row text-left">
+                    <div className="container">
+                      <div className="d-flex flex-nowrap no-gutters mx-auto justify-content-center">
+                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-4">
+                          <img src="https://picsum.photos/100/100?random=2" className="d-block" alt="程式課程推薦 | Felix Lin | 五倍紅寶石" />
+                        </div>
+                        <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                          <p className="d-block statement">慕凡和龍哥是業界數一數二的 Ruby 大師，他們不光是底子深厚，也很懂得引導、訓練學習路上遇到挫折的 Ruby/Rails 學子。很慶幸有他們的協助讓我進入紅寶石的美妙世界。
+                            <br/><span className="d-block text-red large mt-3 mb-2">Hana Chang</span>
+                            <span className="d-block text-grey">Co-Founder and CEO of BountyHunter</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="avatar-partial row text-left">
+                    <div className="container">
+                      <div className="d-flex flex-nowrap no-gutters mx-auto justify-content-center">
+                        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 p-4">
+                          <img src="https://picsum.photos/100/100?random=3" className="d-block" alt="程式課程推薦 | Felix Lin | 五倍紅寶石" />
+                        </div>
+                        <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                          <p className="d-block statement">慕凡和龍哥是業界數一數二的 Ruby 大師，他們不光是底子深厚，也很懂得引導、訓練學習路上遇到挫折的 Ruby/Rails 學子。很慶幸有他們的協助讓我進入紅寶石的美妙世界。
+                            <br/><span className="d-block text-red large mt-3 mb-2">Hana Chang</span>
+                            <span className="d-block text-grey">Co-Founder and CEO of BountyHunter</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="d-flex row" className="buttons">
+                </div>
+              </Carousel>
+            </div>
+        );
+    }
+}
+
+
+class Carousel extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            slice_style :{
+                left: "0%",
+            }
+        };
+        window.tmp = this;
+    }
+    componentDidMount(){
+        var carousel_group = this.props['data-carousel-group'];
+        var carousel = document.querySelector(`.my-carousel[data-carousel-group='${carousel_group}']`);
+        var slices = carousel.querySelectorAll(".slice > *");
+        var button_group = carousel.querySelector(".buttons");
+
+        for(let i = 0; i < slices.length; i++){
+            let button = document.createElement("button");
+            button.innerHTML = '<i class="fas fa-circle"></i>';
+            button.setAttribute("data-carousel-target", i);
+            button.addEventListener("click", this.buttonClick);
+            button_group.append( button );
+        }
+    }
+
+    renderChildren = () => {
+        return React.Children.map(this.props.children, child => {
+            if (child.props.className === "slice"){
+                let c = React.cloneElement(child, {
+                    style: this.state.slice_style,
+                });
+                console.log(c);
+                return c;
+            }
+            else{
+                return child;
+            }
+        });
+    }
+
+    buttonClick = (e) => {
+        let target = e.currentTarget;
+        let index = target.getAttribute("data-carousel-target");
+        this.setState({
+            slice_style:{
+                left: (-index*100) + "%",
+            }
+        });
+    }
+
+
+    render(){
+        return (
+            <div className="my-carousel" data-carousel-group={this.props["data-carousel-group"]}>
+              {this.renderChildren()}
             </div>
         );
     }

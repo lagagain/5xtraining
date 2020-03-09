@@ -205,13 +205,8 @@ footer{
     text-align: left;
 }
 
-#banner img{
-    width: 100%;
-}
 
 #banner{
-    overflow: hidden;
-    white-space: nowrap;
     position: relative;
 }
 
@@ -222,14 +217,30 @@ footer{
     justify-content: center;
 }
 
-#banner .buttons button{
+.my-carousel{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.my-carousel .slice{
+    position: relative;
+    transition: left 1s;
+}
+
+.my-carousel .slice > *{
+    width: 100%;
+    white-space: normal;
+    display: inline-block;
+}
+
+.my-carousel button{
     margin-right: 5px;
     background-color: transparent;
     border: none;
     color: white;
 }
 
-#banner .buttons button:hover{
+.my-carousel button:hover{
     margin-right: 5px;
     background-color: transparent;
     border: none;
@@ -292,4 +303,8 @@ footer{
 .avatar-partial img{
     border-radius: 50%;
     width: 100%;
+}
+
+.recent-lecture{
+    background-color: #f2f2f2;
 }
