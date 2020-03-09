@@ -161,16 +161,16 @@ z
    將送出的表單資料顯示在 Popup Modal 上面(樣式只要求有 popup modal
    效果)
 
-*** 步驟 7: 改用 [[https://webpack.js.org/][webpack]] 替代 [%]
+*** 步驟 7: 改用 [[https://webpack.js.org/][webpack]] 替代 [75%]
 =create-react-app=
     :PROPERTIES:
     :CUSTOM_ID: 步驟 7-改用-webpack-替代-create-react-app
     :END:
 
-- [ ] 設定 loader, 讓專案能讀取 css、js、font、image 等...檔案
-- [ ] 設定 babel, 能編譯 react jsx + es6 語法
+- [X] 設定 loader, 讓專案能讀取 css、js、font、image 等...檔案
+- [X] 設定 babel, 能編譯 react jsx + es6 語法
 - [ ] 分類好資料夾架構
-- [ ] 將先前的五倍首頁 react 版本導入至 webpack 並可運作
+- [X] 將先前的五倍首頁 react 版本導入至 webpack 並可運作
 
 *** 步驟 8: 加入 eslint 修正語法錯誤 0 與 coding style [%]
     :PROPERTIES:
