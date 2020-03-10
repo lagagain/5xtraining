@@ -1,7 +1,6 @@
 import React from 'react';
 import "./XFooter.css";
-
-const PUBLIC_URL = process.env.PUBLIC_URL || '/';
+import { PUBLIC_URL } from "../config.js";
 
 class XFooter extends React.Component{
     scrollToTop(){

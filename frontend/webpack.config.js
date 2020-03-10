@@ -6,6 +6,7 @@ const PUBLIC_PATH = process.env.PUBLIC_URL || '/';
 
 const config = {
     mode: 'development',
+    target: "web",
     entry:{
         index: "./src/index.js",
         contact: "./src/contact.js",
@@ -52,6 +53,10 @@ const config = {
         //     filename: 'index.html',
         //     template: './public/index.html'
         // })
+        new webpack.DefinePlugin({
+            'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL),
+        }),
+
     ],
     devServer: {
         contentBase: path.join(__dirname, 'build'),
