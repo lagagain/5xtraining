@@ -1,0 +1,37 @@
+footer{
+    background-color: #f7f7f7;
+}
+
+.press-img{
+    filter: grayscale(100%);
+}
+
+.press-img:hover{
+    filter: none;
+}
+
+
+.footer-nav{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.footer-nav h5{
+    margin: 10px 25px 10px 0px;
+	  font-size: 0.875rem;
+	  font-weight: bold;
+}
+
+.footer-nav a{
+    white-space: nowrap;
+    margin: 0rem;
+    width: 7.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-nav a:hover{
+    color: #d90845;
+    text-decoration: none;
+}
+

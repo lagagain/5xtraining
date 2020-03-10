@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
+const PUBLIC_PATH = process.env.PUBLIC_URL || '/';
+
 const config = {
     mode: 'development',
     entry:{
@@ -11,8 +13,8 @@ const config = {
     output:{
         path: path.resolve(__dirname, "dist"), 
         filename: '[name].js',
+        publicPath: PUBLIC_PATH,
     },
-    //publicPath: "./",
     module: {
         rules: [
             {

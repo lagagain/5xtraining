@@ -1,4 +1,5 @@
 import React from 'react';
+import "./XHeader.css";
 
 class XHeader extends React.Component{
     constructor(props){

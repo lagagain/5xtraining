@@ -1,4 +1,7 @@
 import React from 'react';
+import "./XFooter.css";
+
+const PUBLIC_URL = process.env.PUBLIC_URL || '/';
 
 class XFooter extends React.Component{
     scrollToTop(){
@@ -30,7 +33,7 @@ class XFooter extends React.Component{
                           <h5><a href="#">關於五倍紅寶石</a></h5>
                           <h5><a href="#">媒體報導</a></h5>
                           <h5><a href="#">團隊成員</a></h5>
-                          <h5><a href="#">聯絡詢價</a></h5>
+                          <h5><a href={PUBLIC_URL + "contact.html"}>聯絡詢價</a></h5>
                           <h5><a href="#">常見問題</a></h5>
                           <h5><a href="#">工作機會</a></h5>
                           <h5><a target="" href="#">開源專案</a></h5>

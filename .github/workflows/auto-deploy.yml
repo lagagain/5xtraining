@@ -23,7 +23,7 @@ jobs:
     - run: cd frontend; npm install
     - run: cd frontend; npm run build
       env:
-        PUBLIC_URL: "."
+        PUBLIC_URL: "/5xtraining/"
         URL: true
 
     - name: GitHub Pages
