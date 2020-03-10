@@ -15,10 +15,10 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build; npx webpack-dev-server --compress",
     "build": "npx webpack; npm run copy_build_resource",
-      "copy_build_resource": "mkdir -p build;cp -r dist/* build/; cp -r public/* build/;",
-      "clean": "rm -r build dist",
+    "copy_build_resource": "mkdir -p build;cp -r dist/* build/; cp -r public/* build/;",
+    "clean": "rm -r build dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,10 +46,10 @@
     "babel-loader": "^8.0.0-beta.0",
     "babel-register": "^6.26.0",
     "css-loader": "^3.4.2",
+    "file-loader": "^5.1.0",
     "handlebars-loader": "^1.7.1",
     "jsxobj": "^1.1.0",
     "less": "^3.11.1",
-    "node": "^12.13.0",
     "style-loader": "^1.1.3",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"

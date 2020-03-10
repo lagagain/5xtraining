@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-    mode: 'production',
+    mode: 'development',
     entry:{
         index: "./src/index.js",
     },
@@ -31,17 +31,30 @@ const config = {
                     'style-loader',
                     'css-loader'
                 ],
-            },{
+            }, {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            }, {
                 test: /\.less$/,
                 loader: 'less-loader',
             },
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            index: './public/index.html'
-        })
-    ]
+        // new HtmlWebpackPlugin({
+        //     filename: 'index.html',
+        //     template: './public/index.html'
+        // })
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, 'build'),
+        compress: true,
+        port: 9000
+    }
 };
 
 module.exports = config;

@@ -55,12 +55,13 @@
 -  [[http://www.ruanyifeng.com/blog/2015/03/react.html][React
    入门实例教程]]
 
-** 必修課題[%]
+** 必修課題[30%]
    :PROPERTIES:
    :CUSTOM_ID: 必修課題
    :END:
 
-*** 步驟 1: 建立 JavaScript 的開發環境[%]
+*** DONE 步驟 1: 建立 JavaScript 的開發環境
+    CLOSED: [2020-03-09 一 23:50]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 1-建立-javascript-的開發環境
     :END:
@@ -85,7 +86,8 @@
 - [X] 了解 =dependencies=、=devDependencies=、=peerDependencies=
    的差異與指令
 
-*** 步驟 2: 在 GitHub 建立 repo[100%]
+*** DONE 步驟 2: 在 GitHub 建立 repo[100%]
+    CLOSED: [2020-03-09 一 23:51]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 2-在-github-建立-repo
     :END:
@@ -101,7 +103,8 @@
   - [X] 如果沒有帳號的話，先申請帳號
   - [X] 接著產生空白的 repo
 
-*** 步驟 3: 建立 React 專案[100%]
+*** DONE 步驟 3: 建立 React 專案[100%]
+    CLOSED: [2020-03-09 一 23:51]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 3-建立-react-專案
     :END:
@@ -116,12 +119,12 @@ z
 - [X] 將使用的 Node.js 版號寫進 =package.json=（也請確認 React
    版號是否有標明）
 
-*** 步驟 4: 復刻 [[https://5xruby.tw/][五倍官網首頁]][30%]
+*** SKIP 步驟 4: 復刻 [[https://5xruby.tw/][五倍官網首頁]][30%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 4-復刻-五倍官網首頁
     :END:
 
-- [X] 引入 =bootstrap=、=jquery= 請使用 yarn 安裝使用
+- [X]  引入 =bootstrap=、=jquery= 請使用 yarn 安裝使用
 - [X] 不使用 React、其它 library, 只能用 jquery + css
    實作官網上的元件(bootstrap 只可用 grid system、排版用的 class)
 - [ ] 請分成三階段發 PR, header、footer、content
@@ -133,7 +136,7 @@ z
 - [ ] 滑鼠在 Carousel 上時暫停自動播放
 - [X] 目標著重於 jquery、javascript、css 熟悉度
 
-*** 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][90%]
+*** TODO 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][90%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 5-使用-react-改寫-五倍官網首頁
     :END:
@@ -149,7 +152,7 @@ z
 - [X] 自動播放（5秒換頁一次）
 - [X] 滑鼠在 Carousel 上時暫停自動播放
 
-*** 步驟 6: 使用 React 製作 [[https://5xruby.tw/contacts][/contacts]] [%]
+*** TODO 步驟 6: 使用 React 製作 [[https://5xruby.tw/contacts][/contacts]] [%]
 頁面
     :PROPERTIES:
     :CUSTOM_ID: 步驟 6-使用-react-製作-contacts-頁面
@@ -161,7 +164,8 @@ z
    將送出的表單資料顯示在 Popup Modal 上面(樣式只要求有 popup modal
    效果)
 
-*** 步驟 7: 改用 [[https://webpack.js.org/][webpack]] 替代 [75%]
+*** DONE 步驟 7: 改用 [[https://webpack.js.org/][webpack]] 替代 [75%]
+    CLOSED: [2020-03-09 一 23:58]
 =create-react-app=
     :PROPERTIES:
     :CUSTOM_ID: 步驟 7-改用-webpack-替代-create-react-app
@@ -172,7 +176,7 @@ z
 - [ ] 分類好資料夾架構
 - [X] 將先前的五倍首頁 react 版本導入至 webpack 並可運作
 
-*** 步驟 8: 加入 eslint 修正語法錯誤 0 與 coding style [%]
+*** TODO 步驟 8: 加入 eslint 修正語法錯誤 0 與 coding style [%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 8-加入-eslint-修正語法錯誤與-coding-style
     :END:
@@ -183,14 +187,14 @@ z
 - [ ] 能夠在終端機使用 =$ yarn lint= 來跑專案內的 js 檔案做檢查
 - [ ] 修正所有 eslint 錯誤
 
-*** 步驟 9: 整合 Travis CI [%]
+*** TODO 步驟 9: 整合 Travis CI [%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 9-整合-travis-ci
     :END:
 
 - [ ] 加入 eslint 當做測試項目
 
-*** 步驟 10: 加入 [[https://github.com/ReactTraining/react-router][React-Router]] [%]
+*** TODO 步驟 10: 加入 [[https://github.com/ReactTraining/react-router][React-Router]] [%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 10-加入-react-router
     :END:
@@ -200,7 +204,7 @@ z
 - [ ] 新加入的 router page 不需實作該頁內容, 只需標註是哪一頁即可
 - [ ] 需有當前網頁路徑的 nav list hightlight 的效果
 
-*** 步驟 11: fetch api 資料串接 [%]
+*** TODO 步驟 11: fetch api 資料串接 [%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 11-fetch-api-資料串接
     :END:
@@ -213,7 +217,7 @@ z
 - [ ] 一頁 post 資料比數最多顯示 4 筆
 - [ ] 至少需要有 =首頁=、=末頁=、=下一頁= 按鈕功能
 
-*** 步驟 12: 錯誤處理 [%]
+*** TODO 步驟 12: 錯誤處理 [%]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 12-錯誤處理
     :END:
@@ -224,7 +228,7 @@ z
    Boundaries]] 替 =/post= 頁面製作 fetch api 拿不到資料的錯誤處理
 - [ ] 錯誤處理的效果顯示自行定義
 
-*** 步驟 13: 使用 [[https://reactjs.org/docs/context.html#api][React [%]
+*** TODO 步驟 13: 使用 [[https://reactjs.org/docs/context.html#api][React [%]
 Context Api]] refactor component
     :PROPERTIES:
     :CUSTOM_ID: 步驟 13-使用-react-context-api-refactor-component
@@ -234,7 +238,7 @@ Context Api]] refactor component
    context api 並以此做 refactor
 - [ ] 此步驟可以隨時安插在其他步驟實作
 
-*** （番外篇）選修課題 [%]
+*** TODO （番外篇）選修課題 [%]
     :PROPERTIES:
     :CUSTOM_ID: 番外篇選修課題
     :END:
