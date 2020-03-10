@@ -6,6 +6,7 @@ const config = {
     mode: 'development',
     entry:{
         index: "./src/index.js",
+        contact: "./src/contact.js",
     },
     output:{
         path: path.resolve(__dirname, "dist"), 
