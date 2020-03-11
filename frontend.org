@@ -55,7 +55,7 @@
 -  [[http://www.ruanyifeng.com/blog/2015/03/react.html][React
    入门实例教程]]
 
-** 必修課題[30%]
+** 必修課題[46%]
    :PROPERTIES:
    :CUSTOM_ID: 必修課題
    :END:
@@ -136,7 +136,8 @@ z
 - [ ] 滑鼠在 Carousel 上時暫停自動播放
 - [X] 目標著重於 jquery、javascript、css 熟悉度
 
-*** TODO 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][90%]
+*** DONE 步驟 5: 使用 React 改寫 [[https://5xruby.tw/][五倍官網首頁]][90%]
+    CLOSED: [2020-03-11 三 12:00]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 5-使用-react-改寫-五倍官網首頁
     :END:
@@ -152,16 +153,17 @@ z
 - [X] 自動播放（5秒換頁一次）
 - [X] 滑鼠在 Carousel 上時暫停自動播放
 
-*** TODO 步驟 6: 使用 React 製作 [[https://5xruby.tw/contacts][/contacts]] [%]
+*** DONE 步驟 6: 使用 React 製作 [[https://5xruby.tw/contacts][/contacts]] [75%]
+    CLOSED: [2020-03-11 三 12:00]
 頁面
     :PROPERTIES:
     :CUSTOM_ID: 步驟 6-使用-react-製作-contacts-頁面
     :END:
 
-- [ ] 必須符合 Controlled Components 特性
-- [ ] 各個欄位必須加上 html5 validate
+- [X] 必須符合 Controlled Components 特性
+- [X] 各個欄位必須加上 html5 validate
 - [ ] 使用 [[https://github.com/reactjs/react-modal][React Modal]]
-   將送出的表單資料顯示在 Popup Modal 上面(樣式只要求有 popup modal
+- [X] 將送出的表單資料顯示在 Popup Modal 上面(樣式只要求有 popup modal
    效果)
 
 *** DONE 步驟 7: 改用 [[https://webpack.js.org/][webpack]] 替代 [75%]

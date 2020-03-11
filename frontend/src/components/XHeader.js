@@ -1,5 +1,6 @@
 import React from 'react';
 import "./XHeader.css";
+import { PUBLIC_URL } from "../config.js";
 
 class XHeader extends React.Component{
     constructor(props){
@@ -61,7 +62,7 @@ class XHeader extends React.Component{
         return (
             <header style={{position:this.state.header_position}}>
               <nav className="d-flex flex-wrap">
-                <a href="#" className="px-4 py-3">
+                <a href={PUBLIC_URL} className="px-4 py-3">
                   <img src="logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" />
                 </a>
 

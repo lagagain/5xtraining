@@ -26,16 +26,16 @@ class Banner extends React.Component{
                     <div className="fb-like fb_iframe_widget" data-href="https://5xruby.tw/press" data-layout="button_count" data-size="large" data-action="like" data-share="true"></div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-12 col-lg-12 text-center text-white">
-                    <ol className="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
-                      <li itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem">
-                        <a itemscope="itemscope" itemtype="https://schema.org/Thing" itemprop="item" href="/">
-                          <span itemprop="name">首頁</span>
+                    <ol className="breadcrumb" itemScope="itemscope" itemType="https://schema.org/BreadcrumbList">
+                      <li itemProp="itemListElement" itemScope="itemscope" itemType="https://schema.org/ListItem">
+                        <a itemScope="itemscope" itemType="https://schema.org/Thing" itemProp="item" href="/">
+                          <span itemProp="name">首頁</span>
                         </a>
                       </li>
-                      <li itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem">
+                      <li itemProp="itemListElement" itemScope="itemscope" itemType="https://schema.org/ListItem">
                         <h5>
-                          <a itemscope="itemscope" itemtype="https://schema.org/Thing" itemprop="item" href="/press">
-                            <span itemprop="name">聯絡我們</span>
+                          <a itemScope="itemscope" itemType="https://schema.org/Thing" itemProp="item" href="/press">
+                            <span itemProp="name">聯絡我們</span>
                           </a>
                         </h5>
                       </li>
@@ -81,49 +81,176 @@ class Main extends React.Component{
                       </div>
                     </div>
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-10" id="mount-map">
-                      
                     </div>
                   </div>
+
                   <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                     <div className="mb-3">
                       任何問題都歡迎您透過以下表單詢問，我們會盡快回覆您！
                     </div>
-                    <form className="new_contact" id="new_contact" action="https://docs.google.com/forms/d/e/1FAIpQLSd2vF30UChnV62_VXwZejZlqwi2i9Wv8ddgBrJbop7lJIAM2A/formResponse" accept-charset="UTF-8" method="post" target="processForm">
-                      <input type="hidden" name="" />
-                      <div className="form-group">
-                        <input className="form-control input-lg" placeholder="名字" type="text" name="entry.1883788675" id="contact_name" required />
-                      </div>
-                      <div className="form-group">
-                        <input className="form-control input-lg" placeholder="信箱" type="email" name="entry.870224435" id="contact_email" required />
-                      </div>
-                      <div className="form-group">
-                        <input className="form-control input-lg" placeholder="電話" type="text" name="entry.1333260650" id="contact_phone" required />
-                      </div>
-                      <div className="form-group">
-                        <select className="form-control input-lg" id="sel1" name="entry.1349143913" required>
-                          <option value="">請選擇主題</option>
-                          <option value="專案開發">專案開發</option>
-                          <option value="技術諮詢">技術諮詢</option>
-                          <option value="企業內訓">企業內訓</option>
-                          <option value="課程詢問">課程詢問</option>
-                          <option value="其它">其它</option>
-                        </select>
-                      </div>
-                      <div className="form-group">
-                        <textarea rows="5" className="form-control" placeholder="留下你的訊息" name="entry.469786748" id="contact_message" required></textarea>
-                      </div>
-                      <div className="form-group">
-                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-                        <div className="g-recaptcha" data-sitekey="6LdJRhgUAAAAAFE0hyvJzsu_BpUeAiBQ0Lrq6xvV"></div>
-
-                        <div className="has-error"></div>
-                      </div>
-                      <input type="submit" name="commit" value="送出" className="btn btn-red btn-block" data-disable-with="送出" />
-                    </form>
+                    <ContactForm></ContactForm>
                   </div>
                 </div>
               </div>
             </div>
+        );
+    }
+}
+
+class ContactForm extends React.Component{
+    constructor (props){
+        super (props);
+        this.state = {
+            contact:{
+                name: "",
+                email: "",
+                phone: "",
+                sel1: "",
+                message: "",
+            },
+            popup_display: "none",
+        };
+    }
+
+    onSubmit = (e)=>{
+        e.preventDefault();
+        this.setState ({
+            popup_display: "block",
+        });
+        return false;
+    }
+    onChange = (e)=>{
+        window.tmp = this;
+        let contact = this.state.contact;
+        let target = e.target;
+        let value = target.value;
+        let name = target.name;
+        contact = {...contact, [name]:value};
+        console.table (contact);
+        this.setState ({
+            contact,
+        });
+        return false;
+    }
+    closePopup = (e) => {
+        e.preventDefault();
+        console.log ("close popup");
+        this.setState ({
+            popup_display: "none",
+        });
+
+        return false;
+    }
+    render(){
+        return (
+            <form className="new_contact"
+                  id="new_contact"
+                  onSubmit={this.onSubmit}
+                  action=""
+                  acceptCharset="UTF-8"
+                  method=""
+                  target="">
+              <div className="form-group">
+                <input className="form-control input-lg"
+                       onChange={this.onChange}
+                       placeholder="名字"
+                       type="text"
+                       name="name"
+                       id="contact_name"
+                       required />
+              </div>
+              <div className="form-group">
+                <input className="form-control input-lg"
+                       onChange={this.onChange}
+                       placeholder="信箱"
+                       type="email"
+                       name="email"
+                       id="contact_email"
+                       required />
+              </div>
+              <div className="form-group">
+                <input className="form-control input-lg"
+                       onChange={this.onChange}
+                       placeholder="電話"
+                       type="text"
+                       name="phone"
+                       id="contact_phone"
+                       required />
+              </div>
+              <div className="form-group">
+                <select className="form-control input-lg"
+                        onChange={this.onChange}
+                        id="sel1"
+                        name="sel1"
+                        required>
+                  <option value="">請選擇主題</option>
+                  <option value="專案開發">專案開發</option>
+                  <option value="技術諮詢">技術諮詢</option>
+                  <option value="企業內訓">企業內訓</option>
+                  <option value="課程詢問">課程詢問</option>
+                  <option value="其它">其它</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <textarea rows="5"
+                          onChange={this.onChange}
+                          className="form-control"
+                          placeholder="留下你的訊息"
+                          name="message"
+                          id="contact_message"
+                          required>
+                </textarea>
+              </div>
+              
+              <input type="submit"
+                     name="commit"
+                     value="送出"
+                     className="btn btn-red btn-block"
+              />
+            <div className="popup-modal" style={{display:this.state.popup_display}}>
+                <div className="container p-2 p-2 p-md-5 text-center">
+                  <div className="row">
+                    <h4 className="col">感謝您的來信，我們會儘快與您聯繫!</h4>
+                  </div>
+                  <hr/>
+                  <div className="row mb-md-5 mb-2">
+                    <h5>遞交的訊息</h5>
+                  </div>
+                  <div className="row pl-md-5 pl-2 mb-5 text-left">
+                    <ul>
+                      <li>
+                        <span className="col-1">姓名：</span>
+                        <p className="col d-inline">
+                          {this.state.contact.name}
+                        </p>
+                      </li>
+                      <li>
+                        <span className="col-1">信箱：</span>
+                        <p className="col d-inline">{this.state.contact.email}</p>
+                      </li>
+                      <li>
+                        <span className="col-1">電話：</span>
+                        <p className="col d-inline">{this.state.contact.phone}</p>
+                      </li>
+                      <li>
+                        <span className="col-1">主題：</span>
+                        <p className="col d-inline">{this.state.contact.sel1}</p>
+                      </li>
+                      <li>
+                        <span className="col-1">訊息： </span>
+                        <p>{this.state.contact.message}</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="row justify-content-center">
+                    <button className="col-3 p-2 btn btn-primary text-nowrap"
+                            onClick={this.closePopup}>
+                      關閉
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
         );
     }
 }
