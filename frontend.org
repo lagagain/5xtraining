@@ -55,7 +55,7 @@
 -  [[http://www.ruanyifeng.com/blog/2015/03/react.html][React
    入门实例教程]]
 
-** 必修課題[46%]
+** 必修課題[53%]
    :PROPERTIES:
    :CUSTOM_ID: 必修課題
    :END:
@@ -196,14 +196,18 @@ z
 
 - [ ] 加入 eslint 當做測試項目
 
-*** TODO 步驟 10: 加入 [[https://github.com/ReactTraining/react-router][React-Router]] [%]
+*** DONE 步驟 10: 加入 [[https://github.com/ReactTraining/react-router][React-Router]] [66%]
+    CLOSED: [2020-03-11 三 14:44]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 10-加入-react-router
     :END:
 
-- [ ] 將首頁 nav 的導覽項目做成各個 router page, 並可以有 single page
+    - Note taken on [2020-03-12 四 10:30] \\
+      目前作法並不是很好，這要求了`XHeader`必須配合`Router`
+
+- [X] 將首頁 nav 的導覽項目做成各個 router page, 並可以有 single page
    render(SPA) 的效果
-- [ ] 新加入的 router page 不需實作該頁內容, 只需標註是哪一頁即可
+- [X] 新加入的 router page 不需實作該頁內容, 只需標註是哪一頁即可
 - [ ] 需有當前網頁路徑的 nav list hightlight 的效果
 
 *** TODO 步驟 11: fetch api 資料串接 [%]

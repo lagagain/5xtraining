@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./XHeader.css";
 import { PUBLIC_URL } from "../config.js";
 
@@ -75,30 +76,36 @@ class XHeader extends React.Component{
                 <div className="d-md-none w-100"></div>
                 <div className="col" id="mobile-dropdown" style={{display:this.state.menu_display}}>
                   <ul className="d-flex flex-column flex-md-row mt-md-auto mt-4 justify-content-md-end">
-                    <li className="p-3">
-                      <i className="pr-1 far fa-gem"></i>
-                      <a className="" href="#" target="">線上課程</a>
-                    </li>
-                    <li className="p-3">
-                      <i className="pr-1 far fa-compass fa-lg"></i>
-                      <a className="" href="#" target=""> ASTRO Camp</a>
-                    </li>
-                    <li className="p-3">
-                      <a className="" href="#">
-                        <svg className="" xmlns="http://www.w3.org/2000/svg" width="12.59" height="19.215" viewBox="0 0 12.59 19.215">
-                          <path id="bolt" d="M10.231,5.536H6.239L7.713,1.045A.834.834,0,0,0,6.91,0H1.927A.832.832,0,0,0,1.1.72L0,9.024a.832.832,0,0,0,.823.941H4.927l-1.6,6.73a.83.83,0,0,0,1.526.606l6.09-10.519A.829.829,0,0,0,10.231,5.536Z" transform="translate(0.762 0.75)" fill="none" stroke="#7d7d7d" strokeWidth="1.5"/>
-                        </svg>
-                        全方位課程
-                        <span className="">
-                          <img src="new-301d86be.svg" alt="全方位網頁設計前後端實戰 - 假日班 | 五倍紅寶石" />
-                        </span>
-                      </a>
-                    </li>
-                    <XHeaderMenuItem name="短期課程" href="#"></XHeaderMenuItem>
-                    <XHeaderMenuItem name="專案開發" href="#"></XHeaderMenuItem>
-                    <XHeaderMenuItem name="企業代訓" href="#"></XHeaderMenuItem>
-                    <XHeaderMenuItem name="空間租借" href="#"></XHeaderMenuItem>
-                    <XHeaderMenuItem name="最新消息" href=""></XHeaderMenuItem>
+                    <Link to={{pathname:"#other", query:{name:"線上課程"}}}>
+                      <li className="p-3">
+                        <i className="pr-1 far fa-gem"></i>
+                        <a className="" href="#" target="">線上課程</a>
+                      </li>
+                    </Link>
+                    <Link to={{pathname:"#other", query:{name:"ASTRO Camp"}}}>
+                      <li className="p-3">
+                        <i className="pr-1 far fa-compass fa-lg"></i>
+                        <a className="" href="#" target=""> ASTRO Camp</a>
+                      </li>
+                    </Link>
+                    <Link to={{pathname:"#other", query:{name:"全方位課程"}}}>
+                      <li className="p-3">
+                        <a className="" href="#">
+                          <svg className="" xmlns="http://www.w3.org/2000/svg" width="12.59" height="19.215" viewBox="0 0 12.59 19.215">
+                            <path id="bolt" d="M10.231,5.536H6.239L7.713,1.045A.834.834,0,0,0,6.91,0H1.927A.832.832,0,0,0,1.1.72L0,9.024a.832.832,0,0,0,.823.941H4.927l-1.6,6.73a.83.83,0,0,0,1.526.606l6.09-10.519A.829.829,0,0,0,10.231,5.536Z" transform="translate(0.762 0.75)" fill="none" stroke="#7d7d7d" strokeWidth="1.5"/>
+                          </svg>
+                          全方位課程
+                          <span className="">
+                            <img src="new-301d86be.svg" alt="全方位網頁設計前後端實戰 - 假日班 | 五倍紅寶石" />
+                          </span>
+                        </a>
+                      </li>
+                    </Link>
+                    <XHeaderMenuItem name="短期課程" href={"#other"}></XHeaderMenuItem>
+                    <XHeaderMenuItem name="專案開發" href={"#other"}></XHeaderMenuItem>
+                    <XHeaderMenuItem name="企業代訓" href={"#other"}></XHeaderMenuItem>
+                    <XHeaderMenuItem name="空間租借" href={"#other"}></XHeaderMenuItem>
+                    <XHeaderMenuItem name="最新消息" href={"#other"}></XHeaderMenuItem>
                   </ul>
                 </div>
               </nav>
@@ -111,7 +118,9 @@ class XHeaderMenuItem extends React.Component{
     render() {
         return (
             <li className="p-3">
-            <a className="" href={this.props.href}>{this.props.name}</a>
+              <Link key="" to={{pathname: "#other", query: {name:this.props.name, href:this.props.href}}}>
+                <a className="" href={this.props.href}>{this.props.name}</a>
+              </Link>
             </li>
         );
     }

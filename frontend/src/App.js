@@ -1,24 +1,37 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 import { XHeader } from "./components/XHeader";
 import { XFooter } from "./components/XFooter";
+import { PUBLIC_URL } from "./config.js";
 
 
 function App() {
     return (
         <div className="App">
           <XHeader></XHeader>
-          <Banner></Banner>
-          <About5X></About5X>
-          <Course></Course>
-          <RecentLecture></RecentLecture>
-          <Showcase></Showcase>
-          <KnowAboutUs></KnowAboutUs>
+          <Route path={PUBLIC_URL + "/"} exact component={Index} />
+          <Route path={PUBLIC_URL + "#other"} component={Other} />
           <XFooter></XFooter>
         </div>
     );
 }
 
+
+class Index extends React.Component{
+    render(){
+        return (
+            <div>
+              <Banner></Banner>
+              <About5X></About5X>
+              <Course></Course>
+              <RecentLecture></RecentLecture>
+              <Showcase></Showcase>
+              <KnowAboutUs></KnowAboutUs>
+            </div>
+        );
+    }
+}
 
 
 class Banner extends React.Component{
@@ -283,7 +296,6 @@ class RecentLecture extends React.Component{
     }
 }
 
-
 class Carousel extends React.Component{
     auto_timer = null
     mouse_hover = false
@@ -368,6 +380,23 @@ class Carousel extends React.Component{
                  onMouseLeave={this.onMouseLeave}
             >
               {this.renderChildren()}
+            </div>
+        );
+    }
+}
+
+class Other extends React.Component{
+    render(){
+        let query = this.props.location.query;
+
+        return (
+            <div className="container" style={{"background-color":"red"}}>
+              <div className="row">
+                <h1>Other Page - {query.name}</h1>
+              </div>
+              <div className="row">
+                頁面施工中......
+              </div>
             </div>
         );
     }

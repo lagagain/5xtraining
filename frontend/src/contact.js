@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './contact.css';
 import App from './ContactApp';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/js/all.min.js';
@@ -10,7 +11,13 @@ var $ = require('jquery');
 window.$ = $;
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter>
+      <Switch>
+        <App />
+      </Switch>
+    </BrowserRouter>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
