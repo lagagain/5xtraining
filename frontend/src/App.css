@@ -53,21 +53,6 @@ a:not(.btn):hover{
     text-decoration: none !important;
 }
 
-#scrTop{
-}
-
-#scrUp{
-    position: fixed;
-    width: 3.125rem;
-    height: 3.125rem;
-    background-color: var(--red);
-    color: #f7f7f7;
-    border-radius: 50%;
-    bottom: 1.5rem;
-    right: 1.25rem;
-    transition: all 0.3s;
-}
-
 .contact-info > strong, small{
     display:block;
 }
