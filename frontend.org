@@ -183,9 +183,7 @@ z
     :CUSTOM_ID: 步驟 8-加入-eslint-修正語法錯誤與-coding-style
     :END:
 
-- [ ] 要求參照
-   [[https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb][airbnb
-   config]]
+- [ ] 要求參照 [[https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb][airbnb config]]
 - [ ] 能夠在終端機使用 =$ yarn lint= 來跑專案內的 js 檔案做檢查
 - [ ] 修正所有 eslint 錯誤
 
