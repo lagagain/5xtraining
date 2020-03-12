@@ -17,10 +17,10 @@ class XFooter extends React.Component{
 
                   <div className="col-12 col-md-3">
                     <a href="#" className="d-block mb-3 press-img">
-                      <img src="footer/press-img-3161693e.png" title="媒體報導" alt="媒體報導" />
+                      <img src={ PUBLIC_URL + "footer/press-img-3161693e.png" } title="媒體報導" alt="媒體報導" />
                     </a>
                     <a href="#" className="d-block press-img" target="">
-                      <img src="footer/cakeresume-8938f367.png" title="CakeResume 找工作" alt="CakeResume 找工作"  />
+                      <img src={ PUBLIC_URL + "footer/cakeresume-8938f367.png" } title="CakeResume 找工作" alt="CakeResume 找工作"  />
                       <span className="text-muted">找工作</span>
                     </a>
                   </div>

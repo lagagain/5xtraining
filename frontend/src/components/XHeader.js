@@ -63,8 +63,8 @@ class XHeader extends React.Component{
         return (
             <header style={{position:this.state.header_position}}>
               <nav className="d-flex flex-wrap">
-                <a href={PUBLIC_URL} className="px-4 py-3">
-                  <img src="logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" />
+                <a href={ PUBLIC_URL } className="px-4 py-3">
+                  <img src={ PUBLIC_URL + "logo-c473f739.png" } alt="網頁設計前後端課程 | 五倍紅寶石" />
                 </a>
 
                 <div className="col d-md-none d-flex justify-content-end"  onClick={this.toggleMenu}>
@@ -96,7 +96,7 @@ class XHeader extends React.Component{
                           </svg>
                           全方位課程
                           <span className="">
-                            <img src="new-301d86be.svg" alt="全方位網頁設計前後端實戰 - 假日班 | 五倍紅寶石" />
+                            <img src={ PUBLIC_URL + "new-301d86be.svg" } alt="全方位網頁設計前後端實戰 - 假日班 | 五倍紅寶石" />
                           </span>
                         </a>
                       </li>
@@ -105,7 +105,9 @@ class XHeader extends React.Component{
                     <XHeaderMenuItem name="專案開發" href={"#other"}></XHeaderMenuItem>
                     <XHeaderMenuItem name="企業代訓" href={"#other"}></XHeaderMenuItem>
                     <XHeaderMenuItem name="空間租借" href={"#other"}></XHeaderMenuItem>
-                    <XHeaderMenuItem name="最新消息" href={"#other"}></XHeaderMenuItem>
+                    <li className="p-3">
+                      <a href={ PUBLIC_URL + "posts" }>最新消息</a>
+                    </li>
                   </ul>
                 </div>
               </nav>

@@ -10,6 +10,7 @@ const config = {
     entry:{
         index: "./src/index.js",
         contact: "./src/contact.js",
+        posts: "./src/posts.js",
     },
     output:{
         path: path.resolve(__dirname, "dist"), 
