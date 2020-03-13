@@ -120,7 +120,6 @@ class ContactForm extends React.Component{
         return false;
     }
     onChange = (e)=>{
-        window.tmp = this;
         let contact = this.state.contact;
         let target = e.target;
         let value = target.value;

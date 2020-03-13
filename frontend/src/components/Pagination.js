@@ -5,7 +5,6 @@ import { PUBLIC_URL } from "../config";
 class Pagination extends React.Component{
     constructor(props){
         super(props);
-        console.log(props);
         this.itemFactory = props.itemFactory || this.defaultItemFactory;
         this.current_page = props.current_page || 1;
 

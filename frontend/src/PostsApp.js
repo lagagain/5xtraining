@@ -13,7 +13,7 @@ class List extends React.Component {
             .then(()=>{this.updateShowPosts();});
         this.getAllUser();
         this.each_page_cnt = 4;
-        window.tmp = this;
+        
 
         this.state = {
             posts: [],
@@ -129,7 +129,7 @@ class List extends React.Component {
         start--;
         end--;
 
-        console.log({each_page_cnt, current_page, page, start, end});
+        
 
         if(this.posts){
             for(let i = start; i < end; i++){
