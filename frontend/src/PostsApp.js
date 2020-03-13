@@ -196,7 +196,7 @@ class List extends React.Component {
         page = page || this.props.match.params.page || 1;
         window.scrollTo(0, 0);
         this.updateShowPosts(page);
-        this.setState({current_page: page});
+        this.setState({current_page: parseInt(page)});
     }
 
     render(){
