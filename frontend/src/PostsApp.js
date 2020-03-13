@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import { Pagination } from "./components/Pagination";
 import { PUBLIC_URL } from "./config";
 
 
@@ -17,6 +18,8 @@ class List extends React.Component {
         this.state = {
             posts: [],
             users: {},
+            current_page: 1,
+            max_page: 0,
         };
 
         this.nav = (<div className="posts-category pb-3 overwrite-posts">
@@ -69,12 +72,18 @@ class List extends React.Component {
                         </div>
                       </div>
                     </div>);
-        this.pagination = [];
         window.addEventListener("popstate", ()=>{this.changeToPage();});
-        for(let i = 1; i <= 5; i++){
-            let link = <Link to={`${PUBLIC_URL}posts/page/${i}`} onClick={()=>{this.changeToPage(i);}}>{i}</Link>;
-            this.pagination.push(link);
-        }
+    }
+
+    paginationItemFactory = (page, text) => {
+        text = (text) ? text: page;
+        return (<Link to={`${PUBLIC_URL}posts/page/${page}`}
+                      onClick={()=>{
+                              this.changeToPage(page);
+                          }}
+                >
+                  {text}
+                </Link>);
     }
 
     toggleCategoryBtn = (e) => {
@@ -89,8 +98,15 @@ class List extends React.Component {
 
     getAllPosts = async () => {
         let posts = await fetch('https://jsonplaceholder.typicode.com/posts');
+        let max_page;
+        let pagination;
+
         posts = await posts.json();
         this.posts = posts;
+
+        max_page = Math.ceil(posts.length / this.each_page_cnt);
+        this.setState({max_page});
+
         return posts;
     };
 
@@ -180,6 +196,7 @@ class List extends React.Component {
         page = page || this.props.match.params.page || 1;
         window.scrollTo(0, 0);
         this.updateShowPosts(page);
+        this.setState({current_page: page});
     }
 
     render(){
@@ -191,7 +208,13 @@ class List extends React.Component {
 
               {this.state.posts}
 
-              {this.pagination}
+              <div className="pagination container">
+                <Pagination itemFactory={this.paginationItemFactory}
+                            max_page={this.state.max_page}
+                            current_page={this.state.current_page}>
+                </Pagination>
+              </div>
+
             </div>
         );
     }

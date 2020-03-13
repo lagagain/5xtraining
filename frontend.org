@@ -55,7 +55,7 @@
 -  [[http://www.ruanyifeng.com/blog/2015/03/react.html][React
    入门实例教程]]
 
-** 必修課題[50%]
+** 必修課題[57%]
    :PROPERTIES:
    :CUSTOM_ID: 必修課題
    :END:
@@ -208,16 +208,17 @@ z
 - [X] 新加入的 router page 不需實作該頁內容, 只需標註是哪一頁即可
 - [ ] 需有當前網頁路徑的 nav list hightlight 的效果
 
-*** TODO 步驟 11: fetch api 資料串接 [0%]
+*** DONE 步驟 11: fetch api 資料串接 [100%]
+    CLOSED: [2020-03-13 五 18:43]
     :PROPERTIES:
     :CUSTOM_ID: 步驟 11-fetch-api-資料串接
     :END:
 
-- [ ] 使用 React 製作 [[https://5xruby.tw/posts][/posts]] 頁面, 資料來源請使用 [[https://jsonplaceholder.typicode.com/][jsonplaceholder]]
-- [ ] 使用 React 製作 pagination component 需達成以下要求：
-  - [ ] 必須是一個獨立且可引入使用的 component
-  - [ ] 至少需要有 =首頁=、=末頁=、=下一頁= 按鈕功能
-- [ ] 一頁 post 資料比數最多顯示 4 筆
+- [X] 使用 React 製作 [[https://5xruby.tw/posts][/posts]] 頁面, 資料來源請使用 [[https://jsonplaceholder.typicode.com/][jsonplaceholder]]
+- [X] 使用 React 製作 pagination component 需達成以下要求：
+  - [X] 必須是一個獨立且可引入使用的 component
+  - [X] 至少需要有 =首頁=、=末頁=、=下一頁= 按鈕功能
+- [X] 一頁 post 資料比數最多顯示 4 筆
 
 *** TODO 步驟 12: 錯誤處理 [%]
     :PROPERTIES:
