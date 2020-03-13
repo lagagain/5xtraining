@@ -19,6 +19,7 @@ ReactDOM.render(
       <XHeader></XHeader>
       <Switch>
         <Route path={ PUBLIC_URL + "posts/" } exact component={List} />
+        <Route path={ PUBLIC_URL + "posts/page/:page" } component={List} />
       </Switch>
       <XFooter></XFooter>
     </BrowserRouter>,

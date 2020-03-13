@@ -1,72 +1,80 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-
+import { PUBLIC_URL } from "./config";
 
 
 class List extends React.Component {
-    nav = (<div className="posts-category pb-3 overwrite-posts">
-                <div className="dropbar light-grey-bg">
-                  <div className="container mb-3 ">
-                    <div className="row">
-                      <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <nav className="navbar navbar-expand navbar-light bg-light p-0">
-                          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul className="navbar-nav">
-                              <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle"
-                                   href="#" id="link"
-                                   data-toggle="dropdown"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   onClick={this.toggleCategoryBtn}
-                                >
-                                  所有類別
-                                </a>
-                                <div className="dropdown-menu" aria-labelledby="link">
-                                  <a className="dropdown-item" href="">
-                                    技術文章
-                                  </a>
-                                  <a className="dropdown-item" href="">
-                                    媒體報導
-                                  </a>
-                                  <a className="dropdown-item" href="">
-                                    最新公告
-                                  </a>
-                                  <a className="dropdown-item" href="">
-                                    工作機會
-                                  </a>
-                                  <a className="dropdown-item" href="">
-                                    社群活動
-                                  </a>
-                                  <a className="dropdown-item" href="">
-                                    心得分享
-                                  </a>
-                                  <a className="dropdown-item" href="">
-                                    案例分享
-                                  </a>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </nav>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-           </div>);
-
     constructor(props){
         super(props);
         this.getAllPosts()
-            .then(this.updateShowPosts);
+            .then(()=>{this.updateShowPosts();});
         this.getAllUser();
+        this.each_page_cnt = 4;
         window.tmp = this;
 
         this.state = {
             posts: [],
             users: {},
         };
+
+        this.nav = (<div className="posts-category pb-3 overwrite-posts">
+                      <div className="dropbar light-grey-bg">
+                        <div className="container mb-3 ">
+                          <div className="row">
+                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                              <nav className="navbar navbar-expand navbar-light bg-light p-0">
+                                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                                  <ul className="navbar-nav">
+                                    <li className="nav-item dropdown">
+                                      <a className="nav-link dropdown-toggle"
+                                         href="#" id="link"
+                                         data-toggle="dropdown"
+                                         aria-haspopup="true"
+                                         aria-expanded="false"
+                                         onClick={this.toggleCategoryBtn}
+                                      >
+                                        所有類別
+                                      </a>
+                                      <div className="dropdown-menu" aria-labelledby="link">
+                                        <a className="dropdown-item" href="">
+                                          技術文章
+                                        </a>
+                                        <a className="dropdown-item" href="">
+                                          媒體報導
+                                        </a>
+                                        <a className="dropdown-item" href="">
+                                          最新公告
+                                        </a>
+                                        <a className="dropdown-item" href="">
+                                          工作機會
+                                        </a>
+                                        <a className="dropdown-item" href="">
+                                          社群活動
+                                        </a>
+                                        <a className="dropdown-item" href="">
+                                          心得分享
+                                        </a>
+                                        <a className="dropdown-item" href="">
+                                          案例分享
+                                        </a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </nav>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>);
+        this.pagination = [];
+        window.addEventListener("popstate", ()=>{this.changeToPage();});
+        for(let i = 1; i <= 5; i++){
+            let link = <Link to={`${PUBLIC_URL}posts/page/${i}`} onClick={()=>{this.changeToPage(i);}}>{i}</Link>;
+            this.pagination.push(link);
+        }
     }
 
     toggleCategoryBtn = (e) => {
@@ -93,10 +101,22 @@ class List extends React.Component {
         this.setState({users});
     }
 
-    updateShowPosts = async () => {
+    updateShowPosts = async (page) => {
+        let posts = [];
+        let each_page_cnt = this.each_page_cnt;
+        let current_page = page || this.props.match.params.page || 1;
+        let start, end;
+        start = (current_page - 1) * each_page_cnt + 1;
+        start = (start > 0) ? start : 1;
+        end = start + each_page_cnt;
+
+        start--;
+        end--;
+
+        console.log({each_page_cnt, current_page, page, start, end});
+
         if(this.posts){
-            let posts = [];
-            for(let i = 0; i < 4; i++){
+            for(let i = start; i < end; i++){
                 let post = this.posts[i];
                 let author_id = post.userId;
                 let author = new Proxy(this.state.users[author_id - 1] || {},
@@ -156,6 +176,12 @@ class List extends React.Component {
         }
     }
 
+    changeToPage = (page) => {
+        page = page || this.props.match.params.page || 1;
+        window.scrollTo(0, 0);
+        this.updateShowPosts(page);
+    }
+
     render(){
         return (
             <div>
@@ -165,7 +191,7 @@ class List extends React.Component {
 
               {this.state.posts}
 
-              <div>Pagination</div>
+              {this.pagination}
             </div>
         );
     }
